@@ -1,0 +1,15 @@
+{
+  "expo": {
+    "name": "Native Notes",
+    "icon": "./path/to/your/app-icon.png",
+    "version": "1.0.0",
+    "slug": "native-notes",
+    "sdkVersion": "27.0.0",
+    "ios": {
+      "bundleIdentifier": "com.jordanblakey.native-notes"
+    },
+    "android": {
+      "package": "com.jordanblakey.native-notes"
+    }
+  }
+}
