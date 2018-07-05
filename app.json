@@ -1,4 +1,6 @@
 {
+  "name": "native-notes",
+  "displayName": "native-notes",
   "expo": {
     "name": "Native Notes",
     "icon": "./public/android-chrome-192x192.png",

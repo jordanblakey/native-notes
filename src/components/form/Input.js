@@ -18,6 +18,7 @@ const Input = ({
         style={styles.input}
         secureTextEntry={secureTextEntry}
         value={value}
+        underlineColorAndroid="transparent"
       />
     </View>
   )
@@ -27,7 +28,7 @@ const styles = StyleSheet.create({
   container: {
     width: '100%',
     borderColor: '#CCC',
-    borderBottomWidth: 2,
+    borderBottomWidth: 1,
     marginTop: 10,
     marginBottom: 10
   },
@@ -40,7 +41,7 @@ const styles = StyleSheet.create({
     height: 30,
     fontSize: 16,
     width: '100%',
-    outline: '0'
+    color: '#999'
   }
 })
 
