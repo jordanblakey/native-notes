@@ -9,8 +9,6 @@ import {
   ListView,
   Image
 } from 'react-native'
-import { Provider } from 'react-redux'
-import Store from '../redux/Store'
 
 // IMPORT ASSETS
 import nn_icon from '../assets/img/icon.png'
@@ -24,23 +22,17 @@ import ToDo from './blocks/ToDo'
 export default class App extends React.Component {
   constructor(props) {
     super(props)
-
-    this.state = {
-      fontLoaded: false
-    }
   }
 
   render() {
     return (
-      <Provider store={Store}>
-        <View style={styles.appContainer}>
-          <TitleBar icon={nn_icon} title={'Native Notes'} />
-          <View style={styles.pageBody}>
-            <ToDo />
-            <Login />
-          </View>
+      <View style={styles.appContainer}>
+        <TitleBar icon={nn_icon} title={'Native Notes'} />
+        <View style={styles.pageBody}>
+          <ToDo />
+          <Login />
         </View>
-      </Provider>
+      </View>
     )
   }
 }
