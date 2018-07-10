@@ -6,8 +6,7 @@ import { View, Image, Text, StyleSheet } from 'react-native'
 const TitleBar = ({ title, icon }) => {
   return (
     <View style={styles.titleView}>
-      <Image style={styles.nnIcon} source={icon} />
-      {/* <Text style={styles.titleText}>{title}</Text> */}
+      <Image style={styles.logo} source={icon} />
     </View>
   )
 }
@@ -21,16 +20,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center'
   },
-  nnIcon: {
+  logo: {
     opacity: 1,
     height: '2.2rem',
     width: '7rem',
     maxHeight: '100%',
     marginRight: 10
-  },
-  titleText: {
-    color: '#FFF',
-    fontSize: 30
   }
 })
 
