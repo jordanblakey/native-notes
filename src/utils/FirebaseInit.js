@@ -3,15 +3,18 @@ import firebase from 'firebase/app'
 import 'firebase/database'
 import 'firebase/auth'
 import 'firebase/storage'
+import { firebaseConfig as config } from '../../app.json'
+
+console.log(config)
 
 // INIT FIREBASE
 const firebase_init = firebase.initializeApp({
-  apiKey: 'AIzaSyD3f4ZOetaZfeHZ9YAt8A5J0bGJlgvuXkc',
-  authDomain: 'native-notes-2b16e.firebaseapp.com',
-  databaseURL: 'https://native-notes-2b16e.firebaseio.com',
-  projectId: 'native-notes-2b16e',
-  storageBucket: 'native-notes-2b16e.appspot.com',
-  messagingSenderId: '76639537272'
+  apiKey: config.apiKey,
+  authDomain: config.authDomain,
+  databaseURL: config.databaseURL,
+  projectId: config.projectId,
+  storageBucket: config.storageBucket,
+  messagingSenderId: config.messagingSenderId
 })
 
 const firebase_db = firebase.database()
