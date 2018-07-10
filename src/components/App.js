@@ -9,9 +9,10 @@ import {
   ListView,
   Image
 } from 'react-native'
+import * as Animatable from 'react-native-animatable'
 
 // IMPORT ASSETS
-import nn_icon from '../assets/img/logo-scorched.svg'
+import logo from '../assets/img/logo-scorched.svg'
 
 // IMPORT COMPONENTS
 import TitleBar from './elements/TitleBar'
@@ -26,14 +27,17 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <View style={styles.appContainer}>
-        <TitleBar icon={nn_icon} />
+      <Animatable.View
+        animation="fadeIn"
+        duration={400}
+        style={styles.appContainer}
+      >
+        <TitleBar icon={logo} />
         <View style={styles.pageBody}>
           <ToDo />
           <Login />
-          <Text>Test</Text>
         </View>
-      </View>
+      </Animatable.View>
     )
   }
 }

@@ -21,7 +21,8 @@ const babelLoaderConfiguration = {
     path.resolve(appDirectory, 'node_modules/react-native-safe-area-view'),
     path.resolve(appDirectory, 'node_modules/@expo/samples'),
     path.resolve(appDirectory, 'node_modules/@expo/vector-icons'),
-    path.resolve(appDirectory, 'node_modules/react-native-platform-touchable')
+    path.resolve(appDirectory, 'node_modules/react-native-platform-touchable'),
+    path.resolve(appDirectory, 'node_modules/react-native-animatable')
   ],
   use: {
     loader: 'babel-loader',
