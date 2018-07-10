@@ -79,6 +79,15 @@ const ttfLoaderConfiguration = {
   ]
 }
 
+const svgLoaderConfiguration = {
+  test: /\.svg$/,
+  use: [
+    {
+      loader: 'react-native-svg-loader'
+    }
+  ]
+}
+
 module.exports = {
   // your web-specific entry file
   entry: path.resolve(appDirectory, 'src/index.js'),
@@ -97,7 +106,8 @@ module.exports = {
       babelLoaderConfiguration,
       cssLoaderConfiguration,
       imageLoaderConfiguration,
-      ttfLoaderConfiguration
+      ttfLoaderConfiguration,
+      svgLoaderConfiguration
     ]
   },
 
