@@ -1,7 +1,11 @@
 import React from 'react'
 import { View, Image, Text, StyleSheet } from 'react-native'
 
+import icon from '../../assets/img/logo-scorched.svg'
+
 // IMPORT ASSETS
+
+console.log(icon)
 
 const TitleBar = ({ title, icon }) => {
   return (

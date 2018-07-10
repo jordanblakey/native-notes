@@ -6,7 +6,6 @@ import {
   Text,
   StyleSheet
 } from 'react-native'
-import { Ionicons } from '@expo/vector-icons'
 
 import { firebase_db, firebase_init } from '../../utils/FirebaseInit'
 
@@ -18,7 +17,6 @@ export default class ToDo extends React.Component {
     super(props)
 
     this.state = {
-      // TODO STATE
       newToDo: '',
       todoSource: new ListView.DataSource({
         rowHasChanged: (row1, row2) => row1 !== row2
@@ -29,7 +27,6 @@ export default class ToDo extends React.Component {
     this.items = []
   }
 
-  // LIFECYCLE METHODS
   componentDidMount() {
     this.itemsRef.on('child_added', dataSnapshot => {
       this.items.push({ id: dataSnapshot.key, text: dataSnapshot.val() })
@@ -71,7 +68,7 @@ export default class ToDo extends React.Component {
       >
         <View style={styles.row}>
           <Text style={styles.todoText}>{rowData.text.todo}</Text>
-          <Ionicons name="md-close" size={18} color="#CFCFCF" />
+          <Text>X</Text>
         </View>
       </TouchableHighlight>
     )
