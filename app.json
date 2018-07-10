@@ -1,0 +1,17 @@
+{
+  "name": "native-notes",
+  "displayName": "native-notes",
+  "expo": {
+    "name": "Scorched Notes",
+    "icon": "./public/icon/android-chrome-192x192.png",
+    "version": "1.0.0",
+    "slug": "native-notes",
+    "sdkVersion": "27.0.0",
+    "ios": {
+      "bundleIdentifier": "com.jordanblakey.nativenotes"
+    },
+    "android": {
+      "package": "com.jordanblakey.nativenotes"
+    }
+  }
+}

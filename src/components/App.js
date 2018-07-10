@@ -31,6 +31,7 @@ export default class App extends React.Component {
         <View style={styles.pageBody}>
           <ToDo />
           <Login />
+          <Text>Test</Text>
         </View>
       </View>
     )
