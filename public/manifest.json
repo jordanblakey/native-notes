@@ -1,9 +1,9 @@
 {
-  "short_name": "Native Notes",
-  "name": "Native Notes: Secure & Portable",
+  "short_name": "Scorched Notes",
+  "name": "Scorched",
   "start_url": "./index.html",
   "theme_color": "#E5E5E5",
-  "background_color": "#6D3CFF",
+  "background_color": "#C4C4C4",
   "display": "standalone",
   "icons": [
     {

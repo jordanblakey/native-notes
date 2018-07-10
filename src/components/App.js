@@ -11,7 +11,7 @@ import {
 } from 'react-native'
 
 // IMPORT ASSETS
-import nn_icon from '../assets/img/icon.png'
+import nn_icon from '../assets/img/logo-scorched.svg'
 
 // IMPORT COMPONENTS
 import TitleBar from './elements/TitleBar'
@@ -27,7 +27,7 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.appContainer}>
-        <TitleBar icon={nn_icon} title={'Native Notes'} />
+        <TitleBar icon={nn_icon} />
         <View style={styles.pageBody}>
           <ToDo />
           <Login />
