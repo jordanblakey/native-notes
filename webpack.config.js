@@ -80,10 +80,17 @@ const ttfLoaderConfiguration = {
   ]
 }
 
+let devtool
+if (process.env.NODE_ENV === 'production') {
+  devtool = 'none'
+} else {
+  devtool = 'source-map'
+}
+
 module.exports = {
   // your web-specific entry file
   entry: path.resolve(appDirectory, 'src/index.js'),
-  devtool: 'source-map',
+  devtool: devtool,
 
   // configures where the build ends up
   output: {
