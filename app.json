@@ -1,17 +1,18 @@
 {
-  "name": "native-notes",
-  "displayName": "native-notes",
+  "name": "scorched",
+  "displayName": "scorched",
   "expo": {
     "name": "Scorched",
     "icon": "./app/icon/android-chrome-192x192.png",
     "version": "1.0.0",
-    "slug": "native-notes",
+    "slug": "scorched",
     "sdkVersion": "27.0.0",
     "ios": {
-      "bundleIdentifier": "com.jordanblakey.nativenotes"
+      "bundleIdentifier": "com.jordanblakey.scorched"
     },
     "android": {
-      "package": "com.jordanblakey.nativenotes"
-    }
+      "package": "com.jordanblakey.scorched"
+    },
+    "description": "Secure, portable notes for web, iOS, and Android."
   }
 }

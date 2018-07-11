@@ -80,17 +80,10 @@ const ttfLoaderConfiguration = {
   ]
 }
 
-let devtool
-if (process.env.NODE_ENV === 'production') {
-  devtool = 'none'
-} else {
-  devtool = 'source-map'
-}
-
 module.exports = {
   // your web-specific entry file
   entry: path.resolve(appDirectory, 'src/index.js'),
-  devtool: devtool,
+  devtool: 'cheap-eval-source-map',
 
   // configures where the build ends up
   output: {
@@ -134,4 +127,9 @@ module.exports = {
       'react-native': 'react-native-web'
     }
   }
+}
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports.devtool = false
+  module.exports.output.publicPath = '/app/assets/'
 }

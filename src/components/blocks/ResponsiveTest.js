@@ -16,7 +16,9 @@ class ResponsiveTest extends ResponsiveComponent {
     this.state = {}
   }
   componentDidUpdate() {
-    console.log(this.state)
+    // console.log(this.state)
+    // ResponsiveComponent listens for changes in
+    // window dimensions and logs them in component state.
   }
 
   render() {

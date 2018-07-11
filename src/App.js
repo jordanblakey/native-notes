@@ -12,6 +12,7 @@ import TitleBar from './components/elements/TitleBar'
 import Login from './components/blocks/Login'
 import ToDo from './components/blocks/ToDo'
 import ResponsiveTest from './components/blocks/ResponsiveTest'
+import Typography from './components/blocks/Typography'
 
 // START APP COMPONENT
 export default class App extends React.Component {
@@ -32,6 +33,7 @@ export default class App extends React.Component {
             <ResponsiveTest />
             <ToDo />
             <Login />
+            <Typography />
           </View>
         </Animatable.View>
       </ScrollView>
