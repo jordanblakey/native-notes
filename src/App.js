@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, View, Text } from 'react-native'
+import { StyleSheet, View, ScrollView } from 'react-native'
 import * as Animatable from 'react-native-animatable'
 // console.disableYellowBox = true
 console.ignoredYellowBox = ['Setting a timer']
@@ -21,18 +21,20 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <Animatable.View
-        animation="fadeIn"
-        duration={400}
-        style={styles.appContainer}
-      >
-        <TitleBar icon={logo} />
-        <View style={styles.pageBody}>
-          <ToDo />
-          <Login />
-          <ResponsiveTest />
-        </View>
-      </Animatable.View>
+      <ScrollView>
+        <Animatable.View
+          animation="fadeIn"
+          duration={400}
+          style={styles.appContainer}
+        >
+          <TitleBar icon={logo} />
+          <View style={styles.pageBody}>
+            <ResponsiveTest />
+            <ToDo />
+            <Login />
+          </View>
+        </Animatable.View>
+      </ScrollView>
     )
   }
 }

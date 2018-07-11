@@ -23,11 +23,9 @@ export default class Login extends React.Component {
   }
 
   componentDidMount() {
-    firebase.auth().onAuthStateChanged((user, err) => {
+    firebase.auth().onAuthStateChanged(user => {
       if (user) {
         this.setState({ authStatus: 'Logged in as ' + user.email })
-      } else {
-        this.setState({ authStatus: 'Error: ' + err })
       }
     })
   }
@@ -95,9 +93,21 @@ export default class Login extends React.Component {
           secureTextEntry
           value={this.state.password}
         />
-        <Button onPress={() => this.onPressSignUp()}>Sign Up</Button>
-        <Button onPress={() => this.onPressLogIn()}>Log In</Button>
-        <Button onPress={() => this.onPressLogOut()}>Log Out</Button>
+        <Button
+          onPress={() => this.onPressSignUp()}
+          style={styles.button}
+          title="Sign Up"
+        />
+        <Button
+          onPress={() => this.onPressLogIn()}
+          style={styles.button}
+          title="Log In"
+        />
+        <Button
+          onPress={() => this.onPressLogOut()}
+          style={styles.button}
+          title="Log Out"
+        />
         <Text style={styles.authState}>{this.state.authStatus}</Text>
       </View>
     )
@@ -120,5 +130,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     color: '#999',
     marginTop: 20
+  },
+  button: {
+    width: '100%'
   }
 })

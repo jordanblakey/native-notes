@@ -87,7 +87,7 @@ export default class ToDo extends React.Component {
           placeholder="What's on your mind?"
           value={this.state.newToDo}
         />
-        <Button onPress={() => this.addToDo()}>Add</Button>
+        <Button onPress={() => this.addToDo()} title="Add" />
         <ListView
           dataSource={this.state.todoSource}
           renderRow={this.renderRow.bind(this)}
