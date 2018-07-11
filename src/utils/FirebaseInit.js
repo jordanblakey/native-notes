@@ -1,8 +1,8 @@
 // IMPORT INTEGRATIONS
-import firebase from 'firebase/app'
-import 'firebase/database'
-import 'firebase/auth'
-import 'firebase/storage'
+import firebase from 'firebase'
+import 'firebase/database/dist/index.cjs'
+import 'firebase/auth/dist/index.cjs'
+import 'firebase/storage/dist/index.cjs'
 import { firebaseConfig as config } from '../../config.json'
 
 // INIT FIREBASE

@@ -1,16 +1,12 @@
 import React from 'react'
-import { View, Image, Text, StyleSheet } from 'react-native'
-
-import icon from '../../assets/img/logo-scorched.svg'
+import { View, Image, StyleSheet } from 'react-native'
 
 // IMPORT ASSETS
 
-console.log(icon)
-
-const TitleBar = ({ title, icon }) => {
+const TitleBar = ({ icon }) => {
   return (
     <View style={styles.titleView}>
-      <Image style={styles.logo} source={icon} />
+      <Image source={icon} style={styles.logo} />
     </View>
   )
 }
@@ -25,11 +21,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   logo: {
-    opacity: 1,
-    height: '2.2rem',
-    width: '7rem',
+    flex: 1,
+    resizeMode: 'contain',
     maxHeight: '100%',
-    marginRight: 10
+    height: 40,
+    width: '100%'
   }
 })
 

@@ -1,6 +1,6 @@
 {
-  "name": "native-notes",
-  "version": "0.1.0",
+  "name": "scorched",
+  "version": "0.0.1",
   "private": true,
   "devDependencies": {
     "babel-loader": "^7.1.2",
@@ -13,7 +13,6 @@
     "file-loader": "^1.1.7",
     "jest-expo": "~27.0.0",
     "react-native-scripts": "latest",
-    "react-native-svg-loader": "^0.1.5",
     "react-test-renderer": "16.3.1",
     "style-loader": "^0.19.0"
   },
@@ -24,18 +23,17 @@
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
     "test": "jest",
-    "web": "webpack-dev-server -d --config ./webpack.config.js  --inline --hot --colors --content-base public/ --history-api-fallback",
-    "build": "NODE_ENV=production webpack -p --config ./webpack.config.js",
-    "build:stats": "webpack --env production --json > stats.json"
+    "web": "webpack-dev-server -d --config ./webpack.config.js  --inline --hot --colors --content-base app/ --history-api-fallback",
+    "build": "NODE_ENV=production webpack -p --config ./webpack.config.js"
   },
   "jest": {
     "preset": "jest-expo"
   },
   "dependencies": {
+    "@firebase/app-types": "^0.3.2",
     "expo": "^27.0.1",
     "expo-web": "^0.0.12",
     "firebase": "^5.2.0",
-    "prop-types": "^15.6.2",
     "react": "16.3.1",
     "react-dom": "16.0.0",
     "react-native": "~0.55.2",

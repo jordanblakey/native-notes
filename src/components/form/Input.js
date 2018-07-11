@@ -15,10 +15,10 @@ const Input = ({
         autoCorrect={false}
         onChangeText={onChangeText}
         placeholder={placeholder}
-        style={styles.input}
         secureTextEntry={secureTextEntry}
-        value={value}
+        style={styles.input}
         underlineColorAndroid="transparent"
+        value={value}
       />
     </View>
   )

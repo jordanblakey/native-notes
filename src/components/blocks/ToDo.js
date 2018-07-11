@@ -62,9 +62,9 @@ export default class ToDo extends React.Component {
   renderRow(rowData) {
     return (
       <TouchableHighlight
+        onPress={() => this.removeToDo(rowData)}
         style={styles.todoRow}
         underlayColor="#BBB"
-        onPress={() => this.removeToDo(rowData)}
       >
         <View style={styles.row}>
           <Text style={styles.todoText}>{rowData.text.todo}</Text>
@@ -78,9 +78,9 @@ export default class ToDo extends React.Component {
     return (
       <View style={styles.container}>
         <Input
-          placeholder="What's on your mind?"
           label="Note"
           onChangeText={text => this.setState({ newToDo: text })}
+          placeholder="What's on your mind?"
           value={this.state.newToDo}
         />
         <Button onPress={() => this.addToDo()}>Add</Button>

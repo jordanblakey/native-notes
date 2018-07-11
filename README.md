@@ -1,112 +1,31 @@
-adb install <package name>.apk
-
-## Commands
-
-### Project Commands
-
-```sh
-yarn test
-yarn version
-yarn start
-yarn web
-yarn android
-yarn ios
-yarn build:android
-yarn build:ios
-yarn build:stats
-yarn lint
-```
-
-### Firebase Commands
-
-```sh
-firebase help
-firebase login
-firebase deploy
-firebase deploy --only functions
-firebase init
-firebase init functions
-firebase init hosting
-firebase serve
-```
-
----
-
-## React Native Crna Setup
-
-### Global Dependencies
-
-```sh
-yarn global add babel-cli
-yarn global add webpack-cli
-yarn global add react-native-cli
-yarn global add create-react-app
-yarn global add create-react-native-app
-```
-
-### Bootstrap
-
-```sh
-create-react-app <app name> --with-web-support
-```
-
-### Bootstrap with Typescript
-
-```sh
-create-react-app <app name> --scripts-version=react-scripts-ts
-yarn add @types/firebase @types/firebase-admin @types/firebase-functions --dev
-yarn add @types/react @types/react-dom --dev
-```
-
-### Install Add-ons
-
-```sh
-yarn add react-native-firebase
-yarn add react-native-typography
-yarn add react-native-bundle-visualizer --dev
-yarn add redux react-redux redux-thunk redux-devtools --dev
-```
-
-### Install Firebase
-
-```sh
-yarn global add firebase-tools
-yarn add firebase
-yarn add firebase-admin
-```
-
----
-
-## React Create Native App Readme
-
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
 
 Below you'll find information about performing common tasks. The most recent version of this guide is available [here](https://github.com/react-community/create-react-native-app/blob/master/react-native-scripts/template/README.md).
 
 ## Table of Contents
 
-- [Updating to New Releases](#updating-to-new-releases)
-- [Available Scripts](#available-scripts)
-  - [npm start](#npm-start)
-  - [npm test](#npm-test)
-  - [npm run ios](#npm-run-ios)
-  - [npm run android](#npm-run-android)
-  - [npm run eject](#npm-run-eject)
-- [Writing and Running Tests](#writing-and-running-tests)
-- [Environment Variables](#environment-variables)
-  - [Configuring Packager IP Address](#configuring-packager-ip-address)
-- [Adding Flow](#adding-flow)
-- [Customizing App Display Name and Icon](#customizing-app-display-name-and-icon)
-- [Sharing and Deployment](#sharing-and-deployment)
-  - [Publishing to Expo's React Native Community](#publishing-to-expos-react-native-community)
-  - [Building an Expo "standalone" app](#building-an-expo-standalone-app)
-  - [Ejecting from Create React Native App](#ejecting-from-create-react-native-app)
-    - [Build Dependencies (Xcode & Android Studio)](#build-dependencies-xcode-android-studio)
-    - [Should I Use ExpoKit?](#should-i-use-expokit)
-- [Troubleshooting](#troubleshooting)
-  - [Networking](#networking)
-  - [iOS Simulator won't open](#ios-simulator-wont-open)
-  - [QR Code does not scan](#qr-code-does-not-scan)
+* [Updating to New Releases](#updating-to-new-releases)
+* [Available Scripts](#available-scripts)
+  * [npm start](#npm-start)
+  * [npm test](#npm-test)
+  * [npm run ios](#npm-run-ios)
+  * [npm run android](#npm-run-android)
+  * [npm run eject](#npm-run-eject)
+* [Writing and Running Tests](#writing-and-running-tests)
+* [Environment Variables](#environment-variables)
+  * [Configuring Packager IP Address](#configuring-packager-ip-address)
+* [Adding Flow](#adding-flow)
+* [Customizing App Display Name and Icon](#customizing-app-display-name-and-icon)
+* [Sharing and Deployment](#sharing-and-deployment)
+  * [Publishing to Expo's React Native Community](#publishing-to-expos-react-native-community)
+  * [Building an Expo "standalone" app](#building-an-expo-standalone-app)
+  * [Ejecting from Create React Native App](#ejecting-from-create-react-native-app)
+    * [Build Dependencies (Xcode & Android Studio)](#build-dependencies-xcode-android-studio)
+    * [Should I Use ExpoKit?](#should-i-use-expokit)
+* [Troubleshooting](#troubleshooting)
+  * [Networking](#networking)
+  * [iOS Simulator won't open](#ios-simulator-wont-open)
+  * [QR Code does not scan](#qr-code-does-not-scan)
 
 ## Updating to New Releases
 
@@ -148,14 +67,14 @@ Like `npm start`, but also attempts to open your app on a connected Android devi
 
 ##### Using Android Studio's `adb`
 
-1.  Make sure that you can run adb from your terminal.
-2.  Open Genymotion and navigate to `Settings -> ADB`. Select “Use custom Android SDK tools” and update with your [Android SDK directory](https://stackoverflow.com/questions/25176594/android-sdk-location).
+1. Make sure that you can run adb from your terminal.
+2. Open Genymotion and navigate to `Settings -> ADB`. Select “Use custom Android SDK tools” and update with your [Android SDK directory](https://stackoverflow.com/questions/25176594/android-sdk-location).
 
 ##### Using Genymotion's `adb`
 
-1.  Find Genymotion’s copy of adb. On macOS for example, this is normally `/Applications/Genymotion.app/Contents/MacOS/tools/`.
-2.  Add the Genymotion tools directory to your path (instructions for [Mac](http://osxdaily.com/2014/08/14/add-new-path-to-path-command-line/), [Linux](http://www.computerhope.com/issues/ch001647.htm), and [Windows](https://www.howtogeek.com/118594/how-to-edit-your-system-path-for-easy-command-line-access/)).
-3.  Make sure that you can run adb from your terminal.
+1. Find Genymotion’s copy of adb. On macOS for example, this is normally `/Applications/Genymotion.app/Contents/MacOS/tools/`.
+2. Add the Genymotion tools directory to your path (instructions for [Mac](http://osxdaily.com/2014/08/14/add-new-path-to-path-command-line/), [Linux](http://www.computerhope.com/issues/ch001647.htm), and [Windows](https://www.howtogeek.com/118594/how-to-edit-your-system-path-for-easy-command-line-access/)).
+3. Make sure that you can run adb from your terminal.
 
 #### `npm run eject`
 
@@ -198,7 +117,6 @@ REACT_NATIVE_PACKAGER_HOSTNAME='my-custom-ip-address-or-hostname' npm start
 ```
 
 Windows:
-
 ```
 set REACT_NATIVE_PACKAGER_HOSTNAME='my-custom-ip-address-or-hostname'
 npm start
@@ -214,10 +132,10 @@ React Native works with [Flow](http://flowtype.org/) out of the box, as long as 
 
 To add a local dependency to the correct Flow version to a Create React Native App project, follow these steps:
 
-1.  Find the Flow `[version]` at the bottom of the included [.flowconfig](.flowconfig)
-2.  Run `npm install --save-dev flow-bin@x.y.z` (or `yarn add --dev flow-bin@x.y.z`), where `x.y.z` is the .flowconfig version number.
-3.  Add `"flow": "flow"` to the `scripts` section of your `package.json`.
-4.  Add `// @flow` to any files you want to type check (for example, to `App.js`).
+1. Find the Flow `[version]` at the bottom of the included [.flowconfig](.flowconfig)
+2. Run `npm install --save-dev flow-bin@x.y.z` (or `yarn add --dev flow-bin@x.y.z`), where `x.y.z` is the .flowconfig version number.
+3. Add `"flow": "flow"` to the `scripts` section of your `package.json`.
+4. Add `// @flow` to any files you want to type check (for example, to `App.js`).
 
 Now you can run `npm run flow` (or `yarn flow`) to check the files for type errors.
 You can optionally use a [plugin for your IDE or editor](https://flow.org/en/docs/editors/) for a better integrated experience.
@@ -285,15 +203,15 @@ If you're not able to load the `http` URL in your phone's web browser, try using
 
 If you're on a Mac, there are a few errors that users sometimes see when attempting to `npm run ios`:
 
-- "non-zero exit code: 107"
-- "You may need to install Xcode" but it is already installed
-- and others
+* "non-zero exit code: 107"
+* "You may need to install Xcode" but it is already installed
+* and others
 
 There are a few steps you may want to take to troubleshoot these kinds of errors:
 
-1.  Make sure Xcode is installed and open it to accept the license agreement if it prompts you. You can install it from the Mac App Store.
-2.  Open Xcode's Preferences, the Locations tab, and make sure that the `Command Line Tools` menu option is set to something. Sometimes when the CLI tools are first installed by Homebrew this option is left blank, which can prevent Apple utilities from finding the simulator. Make sure to re-run `npm/yarn run ios` after doing so.
-3.  If that doesn't work, open the Simulator, and under the app menu select `Reset Contents and Settings...`. After that has finished, quit the Simulator, and re-run `npm/yarn run ios`.
+1. Make sure Xcode is installed and open it to accept the license agreement if it prompts you. You can install it from the Mac App Store.
+2. Open Xcode's Preferences, the Locations tab, and make sure that the `Command Line Tools` menu option is set to something. Sometimes when the CLI tools are first installed by Homebrew this option is left blank, which can prevent Apple utilities from finding the simulator. Make sure to re-run `npm/yarn run ios` after doing so.
+3. If that doesn't work, open the Simulator, and under the app menu select `Reset Contents and Settings...`. After that has finished, quit the Simulator, and re-run `npm/yarn run ios`.
 
 ### QR Code does not scan
 

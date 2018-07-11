@@ -83,16 +83,16 @@ export default class Login extends React.Component {
     return (
       <View style={styles.container}>
         <Input
-          placeholder="Enter your email"
           label="Email"
           onChangeText={email => this.setState({ email })}
+          placeholder="Enter your email"
           value={this.state.email}
         />
         <Input
-          placeholder="Enter your password"
           label="Password"
-          secureTextEntry={true}
           onChangeText={password => this.setState({ password })}
+          placeholder="Enter your password"
+          secureTextEntry={true}
           value={this.state.password}
         />
         <Button onPress={() => this.onPressSignUp()}>Sign Up</Button>
