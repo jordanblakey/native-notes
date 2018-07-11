@@ -82,12 +82,12 @@ const ttfLoaderConfiguration = {
 module.exports = {
   // your web-specific entry file
   entry: path.resolve(appDirectory, 'src/index.js'),
-  devtool: 'eval',
+  devtool: 'source-map',
 
   // configures where the build ends up
   output: {
     filename: 'bundle.js',
-    publicPath: '/app/assets/',
+    publicPath: '/assets/',
     path: path.resolve(appDirectory, './app/assets')
   },
 

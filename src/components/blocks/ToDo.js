@@ -7,7 +7,8 @@ import {
   StyleSheet
 } from 'react-native'
 
-import { firebase_db, firebase_init } from '../../utils/FirebaseInit'
+import firebase from '../../utils/FirebaseInit'
+import 'firebase/database'
 
 import Input from '../form/Input'
 import Button from '../form/Button'
@@ -23,7 +24,10 @@ export default class ToDo extends React.Component {
       })
     }
 
-    this.itemsRef = firebase_db.ref().child('Notes')
+    this.itemsRef = firebase
+      .database()
+      .ref()
+      .child('Notes')
     this.items = []
   }
 

@@ -1,15 +1,13 @@
 import React from 'react'
-import { View, StyleSheet, ActivityIndicator, Text } from 'react-native'
+import { View, StyleSheet, Text } from 'react-native'
+
+import firebase from '../../utils/FirebaseInit'
+import 'firebase/auth'
 
 // IMPORT COMPONENTS
 import Input from '../form/Input'
 import Button from '../form/Button'
 import Loading from '../elements/Loading'
-import {
-  firebase,
-  firebase_auth,
-  firebase_init
-} from '../../utils/FirebaseInit'
 import { aSleep } from '../../utils/Funcs'
 
 // COMPONENT
@@ -22,6 +20,16 @@ export default class Login extends React.Component {
       authenticating: false,
       authStatus: ''
     }
+  }
+
+  componentDidMount() {
+    firebase.auth().onAuthStateChanged((user, err) => {
+      if (user) {
+        this.setState({ authStatus: 'Logged in as ' + user.email })
+      } else {
+        this.setState({ authStatus: 'Error: ' + err })
+      }
+    })
   }
 
   onPressSignUp() {
@@ -62,17 +70,9 @@ export default class Login extends React.Component {
           this.setState({ authStatus: '' })
         })
       })
-      .catch(() => {
+      .catch(err => {
         this.setState({ authStatus: err.message })
       })
-  }
-
-  componentDidMount() {
-    firebase.auth().onAuthStateChanged((user, err) => {
-      if (user) {
-        this.setState({ authStatus: 'Logged in as ' + user.email })
-      }
-    })
   }
 
   renderCurrentState() {
@@ -92,7 +92,7 @@ export default class Login extends React.Component {
           label="Password"
           onChangeText={password => this.setState({ password })}
           placeholder="Enter your password"
-          secureTextEntry={true}
+          secureTextEntry
           value={this.state.password}
         />
         <Button onPress={() => this.onPressSignUp()}>Sign Up</Button>
@@ -109,7 +109,7 @@ export default class Login extends React.Component {
 }
 
 // STYLES
-styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     width: '100%',
     flex: 1

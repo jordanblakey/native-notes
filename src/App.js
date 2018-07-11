@@ -1,7 +1,8 @@
 import React from 'react'
-import { StyleSheet, View, Image } from 'react-native'
+import { StyleSheet, View, Text } from 'react-native'
 import * as Animatable from 'react-native-animatable'
-console.disableYellowBox = true
+// console.disableYellowBox = true
+console.ignoredYellowBox = ['Setting a timer']
 
 // IMPORT ASSETS
 import logo from './assets/img/logo-scorched.png'
@@ -10,6 +11,7 @@ import logo from './assets/img/logo-scorched.png'
 import TitleBar from './components/elements/TitleBar'
 import Login from './components/blocks/Login'
 import ToDo from './components/blocks/ToDo'
+import ResponsiveTest from './components/blocks/ResponsiveTest'
 
 // START APP COMPONENT
 export default class App extends React.Component {
@@ -28,6 +30,7 @@ export default class App extends React.Component {
         <View style={styles.pageBody}>
           <ToDo />
           <Login />
+          <ResponsiveTest />
         </View>
       </Animatable.View>
     )
